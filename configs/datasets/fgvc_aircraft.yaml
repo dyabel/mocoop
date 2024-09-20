@@ -1,0 +1,22 @@
+DATASET:
+  NAME: "FGVCAircraft"
+TRAINER:
+  MoCoOp:
+    GROUPS: [1, 1, 1, 4, 2]
+    PROMPTS: [
+    # ## Photos of aircraft
+        "a photo of a {}, a type of aircraft.",
+    ## General photo prompts
+        "a photo of a {}.",
+        # "a photo of the {}.",
+        "a photo of many {}.",
+    ## Low resolution and pixelated photos
+        "a low resolution photo of the {}.",
+        "a low resolution photo of a {}.",
+        "a pixelated photo of the {}.",
+        "a pixelated photo of a {}.",
+    ## Good quality photos
+        "a good photo of the {}.",
+        "a good photo of a {}.",
+    ]
+    

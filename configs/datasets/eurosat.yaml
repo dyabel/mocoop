@@ -1,0 +1,28 @@
+DATASET:
+  NAME: "EuroSAT"
+TRAINER:
+  MoCoOp:
+    GROUPS: [1, 1, 2, 2,  4, 2]
+    PROMPTS: [
+    # ## Photos of aircraft
+        # "a photo of a {}, a type of aircraft.",
+        "a centered satellite photo of {}.",
+    ## General photo prompts
+        "a photo of a {}.",
+        # "a photo of the {}.",
+        "a photo of the large {}.",
+        "a photo of a large {}.",
+        #
+        "a photo of the small {}.",
+        "a photo of a small {}.",
+    ## Low resolution and pixelated photos
+        "a low resolution photo of the {}.",
+        "a low resolution photo of a {}.",
+        "a pixelated photo of the {}.",
+        "a pixelated photo of a {}.",
+    ## Good quality photos
+        "a good photo of the {}.",
+        "a good photo of a {}.",
+    ]
+    
+

@@ -1,0 +1,64 @@
+DATASET:
+  NAME: "ImageNetV2"
+TRAINER:
+  MoCoOp:
+    PROMPTS: [
+    ## Photos of flowers
+     "a photo of a {}, a type of flower.",
+    # ## Photos of people doing activities
+        "a photo of a person doing {}.",
+    # ## Satellite photos
+        "a centered satellite photo of {}.",
+    # ## Photos of aircraft
+        "a photo of a {}, a type of aircraft.",
+    ## "Itap" (I took a picture) photos
+        "itap of a {}.",
+        "itap of the {}.",
+    ## Photos of large objects
+        "a photo of the large {}.",
+        "a photo of a large {}.",
+    ## Art and renditions
+        "art of the {}.",
+        "a rendering of a {}.",
+        "a rendering of the {}.",
+        # "a rendition of the {}.",
+    ## Photos of small objects
+        "a photo of the small {}.",
+    ## General photo prompts
+        "a photo of a {}.",
+        # "a photo of the {}.",
+        "a photo of many {}.",
+    ## Low resolution and pixelated photos
+        "a low resolution photo of the {}.",
+        # "a low resolution photo of a {}.",
+        # "a pixelated photo of the {}.",
+        "a pixelated photo of a {}.",
+    ## Cropped photos
+        # "a cropped photo of the {}.",
+        # "a cropped photo of a {}.",
+    ## Bright photos
+        # "a bright photo of the {}.",
+    ## Good quality photos
+        "a good photo of the {}.",
+        "a good photo of a {}.",
+    ## Close-up photos
+        # "a close-up photo of the {}.",
+    ## Jpeg corrupted photos
+    #     "a jpeg corrupted photo of the {}.",
+    # ## Blurry photos
+        # "a blurry photo of a {}.",
+    # ## Clean objects
+    #     "a photo of the clean {}.",
+    # ## Video game screenshots
+        "a {} in a video game.",
+    # ## Hard to see objects
+        "a photo of the hard to see {}.",
+    # ## Bad quality photos
+    #     "a bad photo of the {}.",
+    # ## Origami photos
+        "a origami {}.",
+    # ## Texture photos
+        "{} texture.",
+    ]
+    GROUPS: [1, 1, 1, 1, 2, 2, 3, 1, 1, 1, 2, 2, 1, 1, 1, 1] # LARS loss
+
