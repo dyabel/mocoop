@@ -25,5 +25,10 @@ TRAINER:
         "a good photo of the {}.",
         "a good photo of a {}.",
     ]
-   
+    # GROUPS: [1, 1, 1]
+    # LASP_PROMPTS: [
+    #   "A {} culinary masterpiece, carefully crafted to delight the senses and leave you want- ing more.",
+    #   "A {} delight on a plate, perfect for a quick snack or a special treat.",
+    #   "A warm, comforting bowl of {} on a chilly evening, perfect for a cozy night in."
+    # ]
 

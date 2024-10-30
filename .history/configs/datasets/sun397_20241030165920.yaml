@@ -1,12 +1,15 @@
 DATASET:
-  NAME: "UCF101"
+  NAME: "SUN397"
 TRAINER:
   MoELASP:
-    GROUPS: [1, 1, 1, 1, 4, 2]
+    # GROUPS: [1, 1, 1]
+    # LASP_PROMPTS: [
+    #   "A peaceful haven of a {}, where natural serenity meets subtle human touch.",
+    #   "A picturesque snapshot of a {}, where human presence subtly shapes the serene am- biance.",
+    #   "A captivating image of a {}, where vibrant colors and textures evoke a sense ofwonder and curiosity."
+    # ]
+    GROUPS: [1, 1, 4, 2]
     LASP_PROMPTS: [
-        "a photo of a person doing {}.",
-        #
-        "a {} in a video game.",
     ## General photo prompts
         "a photo of a {}.",
         # "a photo of the {}.",
@@ -20,3 +23,4 @@ TRAINER:
         "a good photo of the {}.",
         "a good photo of a {}.",
     ]
+

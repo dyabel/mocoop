@@ -2,6 +2,12 @@ DATASET:
   NAME: "OxfordFlowers"
 TRAINER:
   MoELASP:
+    # GROUPS: [1, 1, 1]
+    # LASP_PROMPTS: [
+    #   "A picturesque {} unfurls its petals, emitting a subtle floral aroma as the morning dew glistens upon its delicate features.",
+    #   "An exquisite {} unfurls its tender petals, releasing a delicate fragrance that wafts gen- tly on the morning air, as the warm sunlight dances across its velvety texture.",
+    #   "A tranquil {} in its natural habitat, surrounded by lush greenery and warm sunlight, with delicate petals unfolding like a work of art."
+    # ]
     GROUPS: [1, 1, 1, 4, 2]
     LASP_PROMPTS: [
     ## Photos of flowers

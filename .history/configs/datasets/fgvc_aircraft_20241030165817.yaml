@@ -2,6 +2,12 @@ DATASET:
   NAME: "FGVCAircraft"
 TRAINER:
   MoELASP:
+    # GROUPS: [1, 1, 1]
+    # LASP_PROMPTS: [
+    # "A photo of a {} aircraft, its worn <control surface texture> and faded <trim scheme pattern> blending into the cracked <concrete texture>.",
+    # "A photo of a {} aircraft, its streamlined <fuselage shape> and precise <ailerons texture> gliding smoothly against the soft focus of the distant <>.",
+    # "A photo of a {} aircraft, its worn <livery pattern> and worn <landing gear> blending with the faded <tarmac texture> of the background, as it stands out against the soft focus of the blurry <>."
+    # ]
     GROUPS: [1, 1, 1, 4, 2]
     LASP_PROMPTS: [
     # ## Photos of aircraft

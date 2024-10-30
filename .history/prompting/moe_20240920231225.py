@@ -378,8 +378,7 @@ class CustomCLIP(nn.Module):
         self.prompt_learner = PromptLearner(cfg, classnames, clip_model, self.text_encoder, all_classnames).to(clip_model.dtype)
         self.tokenized_prompts_all_experts = self.prompt_learner.tokenized_prompts_all_experts
         self.grouped_prototypes = self.prompt_learner.grouped_prototypes
-        self.group_features = self.grouped_prototypes
-        # self.group_features = self.grouped_prototypes.mean(dim=1)
+        self.group_features = self.grouped_prototypes.mean(dim=1)
         self.group_features = self.group_features / self.group_features.norm(dim=-1, keepdim=True)
         if cfg.TRAINER.MoCoOp.ENABLE:
             self.tokenized_prompts_all_class = self.prompt_learner.tokenized_prompts_all_class
@@ -508,8 +507,11 @@ class CustomCLIP(nn.Module):
                 loss_text = 0
             # group_features = F.normalize(group_features, dim=-1)
             if label is not None:
-                group_features = self.group_features[:, label]
-                text_gating = torch.einsum('bd, gbd->bg', image_features, group_features)
+                # print(group_features.shape, label.shape)
+                # group_features = group_features[:, label]
+                # print(group_features.shape)
+                # text_gating = torch.einsum('bd, gbd->bg', image_features, group_features)
+                text_gating = image_features @ self.group_features.T
                 text_gating = increase_top2_logits(text_gating, increment=10.0)
         # """
         loss, logits = self.loss(image_features, text_features, label, t=self.logit_scale, instance_loss=True)

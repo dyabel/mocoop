@@ -2,6 +2,12 @@ DATASET:
   NAME: "EuroSAT"
 TRAINER:
   MoELASP:
+    # GROUPS: [1, 1, 1]
+    # LASP_PROMPTS: [
+    #   "A Sentinel-2 satellite image capturing the symphony of human and environmental harmonies in European {}, as technology's gaze harmonizes with nature’s rhythm.",
+    #   "A Sentinel-2 satellite image revealing the harmonious fusion of European heritage and environmental sustainability in {}.",
+    #   "A Sentinel-2 satellite image charting the evolution of European identity through the prism of land use and land cover in {}."
+    # ]
     GROUPS: [1, 1, 2, 2,  4, 2]
     LASP_PROMPTS: [
     # ## Photos of aircraft

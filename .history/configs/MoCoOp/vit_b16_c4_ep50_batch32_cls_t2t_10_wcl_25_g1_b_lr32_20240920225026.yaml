@@ -43,5 +43,5 @@ TRAINER:
     CTX_INIT: ['A photo of a']
    
     PREC: "amp"
-    LASP_LOSS_WEIGHT: 5.
+    LASP_LOSS_WEIGHT: 1.
     GATE_LOSS_WEIGHT: 1.

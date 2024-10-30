@@ -1,8 +1,8 @@
 DATASET:
   NAME: "ImageNetV2"
 TRAINER:
-  MoCoOp:
-    PROMPTS: [
+  MoELASP:
+    LASP_PROMPTS: [
     ## Photos of flowers
      "a photo of a {}, a type of flower.",
     # ## Photos of people doing activities

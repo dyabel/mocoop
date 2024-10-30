@@ -1,0 +1,26 @@
+DATASET:
+  NAME: "Caltech101"
+TRAINER:
+  MoELASP:
+    # GROUPS: [1, 1, 1]
+    GROUPS: [1, 1, 1, 4, 2]
+    LASP_PROMPTS: [
+        "{} texture.",
+    ## General photo prompts
+        "a photo of a {}.",
+        # "a photo of the {}.",
+        "a photo of many {}.",
+    ## Low resolution and pixelated photos
+        "a low resolution photo of the {}.",
+        "a low resolution photo of a {}.",
+        "a pixelated photo of the {}.",
+        "a pixelated photo of a {}.",
+    ## Good quality photos
+        "a good photo of the {}.",
+        "a good photo of a {}.",
+    ]
+    # LASP_PROMPTS: [
+    #   "A detailed, in-focus image of a {} against a clean or neutral background, showcasing its textures, colors, and any distinctive patterns or features, allowing the viewer to study its intricate details and distinguishing characteristics.",
+    #   "A photo of a {} in its typical setting, with the object’s unique features or details high- lighted, and a blurred or subtle background that does not distract from the object’s significance or characteristics.",
+    #   "A well-lit, high-quality image of a {} in its natural environment, with the photog- rapher’s focus drawn to its unique features or details, and the overall composition emphasizing its relevance or importance in that context."
+    # ]

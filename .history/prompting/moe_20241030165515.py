@@ -378,7 +378,6 @@ class CustomCLIP(nn.Module):
         self.prompt_learner = PromptLearner(cfg, classnames, clip_model, self.text_encoder, all_classnames).to(clip_model.dtype)
         self.tokenized_prompts_all_experts = self.prompt_learner.tokenized_prompts_all_experts
         self.grouped_prototypes = self.prompt_learner.grouped_prototypes
-        self.group_features = self.grouped_prototypes
         # self.group_features = self.grouped_prototypes.mean(dim=1)
         self.group_features = self.group_features / self.group_features.norm(dim=-1, keepdim=True)
         if cfg.TRAINER.MoCoOp.ENABLE:
