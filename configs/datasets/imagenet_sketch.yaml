@@ -1,7 +1,7 @@
 DATASET:
   NAME: "ImageNetSketch"
 TRAINER:
-  MoELASP:
+  MoCoOp:
     LASP_PROMPTS: [
     ## Photos of flowers
      "a photo of a {}, a type of flower.",

@@ -1,7 +1,7 @@
 DATASET:
   NAME: "EuroSAT"
 TRAINER:
-  MoELASP:
+  MoCoOp:
     GROUPS: [1, 1, 2, 2,  4, 2]
     LASP_PROMPTS: [
     # ## Photos of aircraft

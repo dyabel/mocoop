@@ -1,7 +1,7 @@
 DATASET:
   NAME: "StanfordCars"
 TRAINER:
-  MoELASP:
+  MoCoOp:
     GROUPS: [3, 1, 1, 4, 2]
     LASP_PROMPTS: [
         "A photo of the high-performance {}.",

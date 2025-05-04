@@ -7,7 +7,7 @@ OPTIM:
   NAME: "sgd"
   LR: 0.032 # 0.002
 TRAINER:
-  MoELASP:
+  MoCoOp:
     GROUPS: [1, 3, 4, 2]
     LASP_PROMPTS: [
     ## General photo prompts

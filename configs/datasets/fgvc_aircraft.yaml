@@ -1,7 +1,7 @@
 DATASET:
   NAME: "FGVCAircraft"
 TRAINER:
-  MoELASP:
+  MoCoOp:
     GROUPS: [1, 1, 1, 4, 2]
     LASP_PROMPTS: [
     # ## Photos of aircraft

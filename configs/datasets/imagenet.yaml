@@ -4,7 +4,7 @@ TRAIN:
   PRINT_FREQ: 20
   CHECKPOINT_FREQ: 1
 TRAINER:
-  MoELASP:
+  MoCoOp:
     LASP_PROMPTS: [
     ## Photos of flowers
      "a photo of a {}, a type of flower.",
